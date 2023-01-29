@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="">
+    <item
+        android:id="@+id/nav_GameStore"
+        android:icon="@drawable/ic__6gl_t"
+        android:title="@string/navigation_button_gamestore" />
+
+    <item
+        android:id="@+id/nav_Home"
+        android:icon="@drawable/ic__6gl_o"
+        android:title="@string/navigation_button_home" />
+
+    <item
+        android:id="@+id/nav_Friends"
+        android:icon="@drawable/ic__6gl_y"
+        android:title="@string/navigation_button_friends" />
+</menu>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_Home">
+
+    <fragment
+        android:id="@+id/nav_Home"
+        android:name="com.example.toynjoy.fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_GameStore"
+        android:name="com.example.toynjoy.fragment.GameStoreFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gamestore" />
+
+    <fragment
+        android:id="@+id/nav_Friends"
+        android:name="com.example.toynjoy.fragment.FriendsFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_friends" />
+
+    <fragment
+        android:id="@+id/nav_wishlist"
+        android:name="com.example.toynjoy.fragment.WishListFragment"
+        tools:layout="@layout/fragment_wishlist"/>
+
+    <fragment
+        android:id="@+id/nav_library"
+        android:name="com.example.toynjoy.fragment.LibraryFragment"
+        tools:layout="@layout/fragment_library"/>
+</navigation>

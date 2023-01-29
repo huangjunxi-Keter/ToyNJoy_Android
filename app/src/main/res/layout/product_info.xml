@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProductInfo">
+
+    <!--*************************************************************顶部-->
+    <RelativeLayout
+        android:id="@+id/ProjectInfo_Title"
+        style="@style/top"
+        android:layout_alignParentTop="true"
+        android:background="@color/System"
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/toLastPage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_lastpage" />
+
+        <TextView
+            android:id="@+id/Title_InProjectInfo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <!--*************************************************************图片-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Image_InProjectInfo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/ProjectInfo_Title"
+        android:background="@color/System_weaken"
+        android:scaleType="centerCrop" />
+
+    <!--*************************************************************图集&名称-->
+    <LinearLayout
+        android:id="@+id/PartialInfo_InProjectInfo"
+        android:layout_below="@+id/Image_InProjectInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:orientation="vertical"
+        android:background="@color/System">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ImageList_InProjectInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/Mini_Image_InProjectInfo"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/System_weaken"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Price_InProjectInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--*************************************************************中间内容-->
+    <ScrollView
+        android:id="@+id/Content_InProductInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Foot_InProductInfo"
+        android:layout_below="@+id/PartialInfo_InProjectInfo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/game_brief_introduction"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/Brief_InProductInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--*************************************************************底部-->
+    <LinearLayout
+        android:id="@+id/Foot_InProductInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/isLove"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            android:src="@drawable/ic_xin_gray"/>
+
+        <Button
+            android:id="@+id/Buy_InProductInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/buy"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_style"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

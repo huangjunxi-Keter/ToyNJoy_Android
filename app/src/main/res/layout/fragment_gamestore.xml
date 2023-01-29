@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.GameStoreFragment">
+
+    <LinearLayout
+        style="@style/selectBox">
+
+        <EditText
+            android:id="@+id/select_product_name"
+            style="@style/selectEdit"/>
+
+        <ImageButton
+            android:id="@+id/select_product_button"
+            style="@style/selectButton"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/GameType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/orderByName"
+                style="@style/forContent"
+                android:paddingRight="20dp"
+                android:tag="name"
+                android:text="@string/orderByName"/>
+
+            <TextView
+                android:id="@+id/orderByReleaseDate"
+                style="@style/forContent"
+                android:paddingRight="20dp"
+                android:tag="release_date"
+                android:text="@string/orderByCreateTime"/>
+
+            <TextView
+                android:id="@+id/orderByPrice"
+                style="@style/forContent"
+                android:paddingRight="20dp"
+                android:tag="price"
+                android:text="@string/orderByPrice"/>
+
+            <TextView
+                android:id="@+id/orderByPurchases"
+                style="@style/forContent"
+                android:paddingRight="20dp"
+                android:tag="purchases"
+                android:text="@string/orderBySales"/>
+
+            <TextView
+                android:id="@+id/orderByBrowse"
+                style="@style/forContent"
+                android:tag="browse"
+                android:text="@string/orderByBrowse"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--下拉刷新用的Header-->
+        <RelativeLayout
+            android:id="@+id/rl_header_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ProgressBar
+                android:id="@+id/progress_loading_dialog"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:indeterminateBehavior="repeat"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/GameStore_Content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:paddingBottom="50dp"/>
+
+        <!--上拉加载用的Footer-->
+        <RelativeLayout
+            android:id="@+id/footerRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ProgressBar
+                android:id="@+id/progress_loading_dialog2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:indeterminateBehavior="repeat"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

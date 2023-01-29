@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/forPage"
+    tools:context=".activity.ToyNJoyMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/top"
+            android:background="@color/System">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                style="@style/portraitImage"
+                android:id="@+id/portrait_mini"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:shapeAppearanceOverlay="@style/circleImageStyle"
+                app:srcCompat="@drawable/ic_mine_unselected"
+                app:strokeColor="@color/System"
+                app:strokeWidth="2dp" />
+
+
+
+        </LinearLayout>
+
+        <include layout="@layout/content_main" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="bottom|end"
+        app:menu="@menu/bottom_navigation_menu"/>
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        style="@style/Auto_Width"-->
+<!--        android:theme="@style/Theme.ToyNJoy.AppBarOverlay">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingTop="40dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            &lt;!&ndash; 系统头部工具栏（themes） &ndash;&gt;-->
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_weight="2"-->
+<!--                android:background="?attr/colorPrimary"-->
+<!--                app:popupTheme="@style/Theme.ToyNJoy.PopupOverlay" />-->
+
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"/>-->
+
+<!--            <Button-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="2"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        style="@style/forContent"-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_marginEnd="@dimen/fab_margin"-->
+<!--        android:layout_marginBottom="80dp"-->
+<!--        app:srcCompat="@drawable/ic__6gl_j" />-->
+
+<!--    <TableLayout-->
+<!--        style="@style/Auto_Width"-->
+<!--        android:layout_gravity="bottom|end">-->
+
+<!--        <TableRow-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="10dp">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/GameStore"-->
+<!--                style="@style/Navigation_Button"-->
+<!--                android:background="@drawable/ic__6gl_t"/>-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/Home"-->
+<!--                style="@style/Navigation_Button"-->
+<!--                android:background="@drawable/ic__6gl_o"/>-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/Friends"-->
+<!--                style="@style/Navigation_Button"-->
+<!--                android:background="@drawable/ic__6gl_y"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow-->
+<!--            android:gravity="center"-->
+<!--            android:paddingBottom="5dp">-->
+
+<!--            <TextView-->
+<!--                style="@style/Navigation_Laber"-->
+<!--                android:text="@string/navigation_button_gamestore"/>-->
+
+<!--            <TextView-->
+<!--                style="@style/Navigation_Laber"-->
+<!--                android:text="@string/navigation_button_home"/>-->
+
+<!--            <TextView-->
+<!--                style="@style/Navigation_Laber"-->
+<!--                android:text="@string/navigation_button_friends"/>-->
+
+<!--        </TableRow>-->
+
+<!--    </TableLayout>-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
